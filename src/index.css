@@ -1,0 +1,233 @@
+@import "tailwindcss";
+
+@media print {
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+  /* Hide standard page layout when printing */
+  nav, header, main, footer, .bg-slate-900\/60, .fixed.inset-0 .shrink-0, .fixed.inset-0 .bg-slate-50 {
+    display: none !important;
+  }
+  /* Adjust certificate frame for full page printing */
+  #sena-certificate-frame {
+    display: block !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border: 8px solid #39A900 !important;
+    box-shadow: none !important;
+    background: white !important;
+  }
+  /* Adjust official report for full page printing */
+  #sena-report-printable {
+    display: block !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border: 1px solid #cbd5e1 !important;
+    box-shadow: none !important;
+    background: white !important;
+    padding: 2rem !important;
+  }
+  /* Ensure fixed container allows printing */
+  .fixed.inset-0 {
+    position: absolute !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    display: block !important;
+  }
+  .fixed.inset-0 > div {
+    max-width: 100% !important;
+    border: none !important;
+    box-shadow: none !important;
+    height: auto !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+/* Glassmorphism Theme Overrides */
+.theme-glass {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-color: #050508;
+  color: #cbd5e1;
+}
+
+/* Glass Panels with high blur and subtle border */
+.theme-glass .bg-white,
+.theme-glass .bg-white\/70,
+.theme-glass .bg-white\/90 {
+  background: rgba(15, 15, 20, 0.45) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5) !important;
+  color: #f1f5f9 !important;
+}
+
+/* Glassmorphism modal content and custom dialog cards */
+.theme-glass .fixed .bg-white {
+  background: rgba(10, 10, 15, 0.85) !important;
+  backdrop-filter: blur(28px) !important;
+  -webkit-backdrop-filter: blur(28px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Specific text color fixes for better contrast on glass */
+.theme-glass text-slate-800,
+.theme-glass .text-slate-800,
+.theme-glass .text-slate-700,
+.theme-glass .text-slate-600 {
+  color: #cbd5e1 !important;
+}
+
+.theme-glass .text-slate-900,
+.theme-glass .text-slate-950,
+.theme-glass .text-slate-900 {
+  color: #ffffff !important;
+}
+
+.theme-glass .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+.theme-glass .border-slate-200,
+.theme-glass .border-slate-100 {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Glass sidebar & detail boxes */
+.theme-glass .bg-slate-50,
+.theme-glass .bg-slate-50\/50,
+.theme-glass .bg-slate-100,
+.theme-glass .bg-slate-100\/50 {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  color: #e2e8f0 !important;
+}
+
+/* High contrast glass borders */
+.theme-glass .border-slate-200\/60 {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Ensure glass inputs and textareas are ultra sleek */
+.theme-glass input,
+.theme-glass select,
+.theme-glass textarea {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+.theme-glass input::placeholder,
+.theme-glass textarea::placeholder {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Main Navigation Bar Glass styling */
+.theme-glass nav {
+  background: rgba(10, 10, 12, 0.7) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.theme-glass nav button {
+  color: #94a3b8 !important;
+}
+
+.theme-glass nav button:hover {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Primary Crimson buttons inspired by the uploaded glassmorfismo design */
+.theme-glass .bg-red-600 {
+  background: linear-gradient(135deg, #b91c1c 0%, #7f1d1d 100%) !important;
+  border: 1px solid rgba(239, 68, 68, 0.3) !important;
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.35) !important;
+  transition: all 0.2s ease !important;
+}
+
+.theme-glass .bg-red-600:hover {
+  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%) !important;
+  box-shadow: 0 6px 20px rgba(220, 38, 38, 0.45) !important;
+}
+
+/* Green SENA accent buttons */
+.theme-glass .bg-\[\#39A900\] {
+  background: linear-gradient(135deg, #39A900 0%, #2a7a00 100%) !important;
+  border: 1px solid rgba(57, 169, 0, 0.3) !important;
+  box-shadow: 0 4px 15px rgba(57, 169, 0, 0.3) !important;
+  transition: all 0.2s ease !important;
+}
+
+.theme-glass .bg-\[\#39A900\]:hover {
+  background: linear-gradient(135deg, #44ca00 0%, #319200 100%) !important;
+  box-shadow: 0 6px 20px rgba(57, 169, 0, 0.45) !important;
+}
+
+/* Table styling for glassmorphism */
+.theme-glass table {
+  color: #e2e8f0 !important;
+}
+
+.theme-glass tr {
+  border-bottom-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+.theme-glass tr:hover {
+  background: rgba(255, 255, 255, 0.02) !important;
+}
+
+.theme-glass th {
+  background: rgba(255, 255, 255, 0.04) !important;
+  color: #ffffff !important;
+}
+
+/* Scrollbar styling */
+.theme-glass ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.theme-glass ::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.theme-glass ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 99px;
+}
+
+.theme-glass ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Soft white glow animation for glassmorphic cards */
+@keyframes soft-glow {
+  0%, 100% {
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 8px 32px 0 rgba(185, 28, 28, 0.1), 0 0 15px rgba(255, 255, 255, 0.03);
+  }
+}
+
+.theme-glass .rounded-xl,
+.theme-glass .rounded-2xl {
+  animation: soft-glow 8s infinite ease-in-out;
+}

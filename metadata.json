@@ -1,0 +1,8 @@
+{
+  "name": "Remix Guía Operativa y Simulador de Inducción FPI SENA",
+  "description": "Herramienta interactiva y Guía Pedagógica Ejecutiva para la Semana de Inducción SENA (Circular 006 de 2016) basada en la competencia 240201500. Diseñada para instructores y aprendices en modalidades presencial y virtual (Zajuna).",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
